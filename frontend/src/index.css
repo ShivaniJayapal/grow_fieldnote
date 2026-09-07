@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-app: #f8fafd;
+    --bg-card: #ffffff;
+    --border-subtle: #eaedf1;
+    --border-strong: #d8dde4;
+    --text-primary: #1e2233;
+    --text-muted: #7c7e8c;
+    --groww-teal: #00D09C;
+    --groww-blue: #5367FF;
+  }
+
+  body {
+    background:
+      radial-gradient(circle at 92% 15%, rgba(0, 208, 156, 0.08), transparent 28%),
+      linear-gradient(135deg, #f8fafd 0%, #f6fbfa 52%, #f1fbf8 100%);
+    color: var(--text-primary);
+    font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .fieldnote-shell {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(248, 250, 253, 0.86)),
+      radial-gradient(ellipse at 88% 100%, rgba(0, 208, 156, 0.11), transparent 36%);
+  }
+
+  .fieldnote-panel {
+    border: 1px solid rgba(216, 221, 228, 0.82);
+    box-shadow: 0 6px 20px rgba(37, 54, 78, 0.045), 0 1px 2px rgba(37, 54, 78, 0.035);
+  }
+
+  .fieldnote-kicker {
+    letter-spacing: 0.12em;
+  }
+}
+
+/* Custom scrollbars for clean Groww style */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f4f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8dde4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b5bcc7;
+}
+
+/* Tabular number helper */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
